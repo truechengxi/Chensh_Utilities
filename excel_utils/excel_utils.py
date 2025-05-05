@@ -124,8 +124,7 @@ def process_excel_file(excel_file, json_file):
         heads.append(sheet.cell(1, column + 1).value)
     # 遍历每一行
     for row in range(max_row):
-        if row < 2:
-        	# 前两行跳过
+        if row < 1:  # 跳过第一行
             continue
         one_line = {}
         # 遍历一行中的每一个单元格
